@@ -1,0 +1,358 @@
+:root {
+    --green: #3EB4AB;
+    --dark-green: #157A74;
+    --text-color: #818181;
+    --main-pd: 1.5rem;
+    --brad: 10px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #f0f0f0;
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+p {
+    color: var(--text-color);
+    margin: var(--main-pd) 0;
+}
+
+.links {
+    background: var(--green);
+    padding: 0.8rem 2rem;
+    border-radius: 50px;
+    transition: all 1s ease;
+}
+.links:hover {
+    background: var(--dark-green);
+}
+
+header {
+    background: url('/images/image-hero-mobile.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 300px;
+}
+
+header div {
+    display: flex;
+    justify-content: space-between;
+    background: linear-gradient(black, #0000);
+    padding: var(--main-pd);
+    position: relative;
+}
+
+header img {
+    width: 120px;
+    height: 20px;
+
+}
+
+.navbtn {
+    color: white;
+}
+
+.navbar {
+    display: none;
+    list-style: none;
+    position: absolute;
+}
+
+.shownav {
+    display: inline;
+    left: 4rem;
+    right: 4rem;
+    top: 4rem;
+    background: white;
+    border-radius: var(--brad);
+    box-shadow: 0 0 500px rgba(0, 0, 0);
+    z-index: 1;
+}
+.shownav li {
+    padding: 2rem 1rem;
+    border-bottom: solid 1px #cccccc;
+}
+.shownav li:last-child {
+    border: none;
+}
+
+.shownav .nav-links {
+    color: black;
+}
+
+.nav-links {
+    margin: var(--main-pd);
+}
+
+section, .success-card, .modal {
+    margin: var(--main-pd);
+    padding: var(--main-pd);
+    border-radius: var(--brad);
+    background: white;
+    position: relative;
+}
+
+.mastercraft {
+    display: grid;
+    place-items: center;
+    margin-top: -45px;
+}
+
+.main {
+    margin-top: -50px;
+    text-align: center;
+}
+
+.main h1 {
+    font-size: 1.3rem;
+    padding: var(--main-pd);
+}
+
+.cta {
+    margin: var(--main-pd) auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--main-pd);
+    justify-content: center;
+}
+
+.cta .links {
+    padding: 1.2rem 3rem;
+    height: 100%;
+}
+
+.bookmark {
+    display: flex;
+    place-items: center;
+    background: #F0F0F0;
+    height: fit-content;
+    border-radius: 50px;
+}
+
+.bookmark:hover {
+    cursor: pointer;
+}
+
+.bookmark a {
+    height: 56px;
+}
+.bookmark p {
+    display: none;
+    padding: 0  var(--main-pd);
+    font-weight: bolder;
+    margin: 0;
+}
+
+.marked circle {
+    fill: var(--dark-green);
+    background-color: white;
+}
+.marked path {
+    fill: white;
+}
+.marked p {
+    color: var(--dark-green);
+}
+
+.stats {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.stats p {
+    color: black;
+    font-size: 1.8rem;
+    font-weight: 700;
+    line-height: 1.5rem;
+    margin: 1rem;
+    padding: 1rem;
+    position: relative;
+    text-align: center;
+}
+
+.stats p::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 40%;
+    width: 20%;
+    height: 2px;
+    background-color: #cccccc;
+}
+.stats p:last-child::after {
+    display: none;
+}
+
+.stats span {
+    color: var(--text-color);
+    font-size: 0.8rem;
+}
+
+.progress {
+    content: "";
+    background: #cccccc;
+    border-radius: var(--brad);
+}
+.progress-bar {
+    content: "";
+    width: 80%;
+    height: 1rem;
+    background-color: var(--green);
+    border-radius: var(--brad);
+} 
+
+h2 {
+    margin: var(--main-pd) 0;
+}
+
+.product {
+    padding: var(--main-pd);
+    margin: var(--main-pd) 0;
+    border-radius: var(--brad);
+    border: 1px solid #cccccc;
+}
+
+.pledge {
+    color: var(--green);
+    margin-top: 0.3rem;
+}
+.product-cta p {
+    font-size: 2rem;
+    color: black;
+    font-weight: 700;
+}
+.product-cta span {
+    font-size: 1rem;
+    color: var(--text-color);
+    font-weight: 500;
+}
+.product-cta {
+    margin: 1rem 0;
+}
+
+.disabled {
+    pointer-events: none;
+    opacity: 0.4;
+}
+.disabled .links {
+    background: #818181;
+}
+
+
+aside {
+    display: none;
+    z-index: 1;
+}
+
+aside .product {
+    padding: 0;
+}
+
+
+.modal-product {
+    display: flex;
+    padding: 2rem ;
+    padding-bottom: 0;
+}
+
+.desc p, .modal-cta p {
+    margin: 0;
+}
+.modal-desc, .desc .pledge {
+    margin-left: 1rem;
+}
+.desc {
+    position: relative;
+    display: flex;
+}
+
+.rem {
+    color: black;
+    font-weight: 700;
+    position: absolute;
+    right: 0;
+}
+.rem span {
+    color: var(--text-color);
+    font-weight: 500;
+}
+
+.modal-cta {
+    display: none;
+    justify-content: space-between;
+    border-top: 1px solid #ccc ;
+    margin: 0;
+    padding: 1rem var(--main-pd);
+    
+}
+.modal-cta p {
+    align-self: center;
+}
+
+.cta-amt {
+    display: flex;
+}
+
+.amt-div {
+    width: 100px;
+    border-radius: 50px;
+    display: flex;
+    border: 1px solid var(--text-color);
+    justify-content: center;
+    align-content: center;
+    margin: 0 1rem;
+}
+.amt-div span {
+    align-self: center;
+}
+.amt-div input {
+    width: 55px;
+    border: none;
+    padding: 5px;
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+.show-cta {
+    border: 1px solid var(--green);
+}
+
+.show-cta .modal-cta {
+    display: flex;
+}
+
+.success-modal {
+    display: none;
+    height: 100vh;
+    text-align: center;
+    z-index: 10;
+}
+
+.success-card {
+    padding: 2rem var(--main-pd);
+    z-index: 10;
+}
+
+.show-modal {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    background: rgba(0, 0, 0, 0.212);
+    width: 100%;
+    justify-content: center;
+    align-content: center;
+}

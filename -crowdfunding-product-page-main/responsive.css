@@ -1,0 +1,63 @@
+@media screen and (min-width:440px) {
+    section, .success-card, .modal {
+        width: 400px;
+        margin: var(--main-pd) auto;
+    }
+}
+
+@media screen and (min-width:640px) {
+
+    header div {
+        padding: var(--main-pd) 10% ;
+    }
+    .navbtn {
+        display: none;
+    }
+
+    .navbar {
+        display: flex;
+        position: static;
+    }
+
+    section, .modal {
+        width: 600px;
+        margin: var(--main-pd) auto;
+        padding: var(--main-pd) 2rem;
+    }
+
+    .cta {
+        justify-content: space-between;
+        margin: var(--main-pd) 2rem;
+    }
+
+    .bookmark p {
+        display: inline;
+    }
+
+    .stats {
+        flex-direction: row;
+    }
+
+    .stats p {
+        margin: 2rem auto;
+        width: 33%;
+        padding: 0;
+    }
+
+    .stats p::after {
+        top: 0;
+        right: 1px;
+        left: auto;
+        width: 2px;
+        height: 50px;
+    }
+
+    .card, .product-cta {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .card p, .product-cta p {
+        margin: 0;
+    }
+}

@@ -1,0 +1,130 @@
+// Primary Clolor
+
+    $Red: hsl(0, 78%, 62%);
+    $Cyan: hsl(180, 62%, 55%);
+    $Orange: hsl(34, 97%, 64%);
+    $Blue: hsl(212, 86%, 64%);
+
+// Neutral
+
+    $Very-Dark-Blue: hsl(234, 12%, 34%);
+    $Grayish-Blue: hsl(229, 6%, 66%);
+    $Light-Gray: hsl(0, 0%, 98%);
+
+//  Body Copy
+    $div-width: 300px;
+    $Font-size: 15px;
+    $bold-heading: 600;
+
+    %cards {
+        width: $div-width;
+        height: 200px;
+        padding: 2rem;
+        border-top: 5px solid;
+        border-radius: 5px;
+        box-shadow: 0 5px 10px $Grayish-Blue;
+        margin: 2rem auto;
+        transition: all 0.5s ease-in;
+       
+    }
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: $Light-Gray;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: $Font-size;
+    font-weight: 200;
+    color: $Grayish-Blue;
+}
+
+header {
+    text-align: center;
+    width: auto;
+    margin: 2rem auto;
+
+
+    h1 {
+        color: $Very-Dark-Blue;
+        font-weight: $bold-heading;
+        margin: .3rem;
+    }
+
+    .heading {
+        color: $Grayish-Blue;
+        font-weight: 400;
+        margin: .3rem;
+    }
+    p {
+        width: $div-width;
+        margin: auto;
+    }
+}
+
+h3 {
+    color: $Very-Dark-Blue;
+    font-weight: $bold-heading;
+}
+
+section{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: max-content;
+    margin: auto;
+}
+
+.card-vert{
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    margin: auto;
+}
+
+.card-left {
+    @extend %cards;
+    border-top-color: $Blue;
+}
+.card-up {
+    @extend %cards;
+    border-top-color: $Red;
+}
+.card-down {
+    @extend %cards;
+    border-top-color: $Orange;
+}
+.card-right {
+    @extend %cards;
+    border-top-color: $Blue;
+}
+
+.cards:hover {
+    transform: scale(1.05);
+}
+
+@media (min-width:1000px) {
+    section{
+        flex-direction: row;
+        margin: auto;
+    }
+    .card-vert {
+        margin: 2px;
+    }
+
+    .card-horiz{
+        position: relative;
+        width: max-content;
+        margin: auto 2rem;
+    }
+
+    
+    
+    
+
+    
+}

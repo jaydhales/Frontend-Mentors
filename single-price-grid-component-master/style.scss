@@ -1,0 +1,105 @@
+* {
+    padding: 0;
+    box-sizing: border-box;
+}
+
+// Colors
+$Cyan: hsl(179, 62%, 43%);
+$Yellow: hsl(71, 73%, 54%);
+$Light-Gray: hsl(204, 43%, 93%);
+$Grayish-Blue: hsl(218, 22%, 67%);
+
+%bold {
+    font-weight: 700;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: $Light-Gray;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+.main {
+    width: max-content;
+    margin: 3rem auto;
+    box-shadow: 0 0 30px 10px rgba(0, 0, 0, 0.4);
+}
+
+.card {
+    padding: 2rem;
+    width: 325px;
+}
+
+.card-white {
+    color: $Grayish-Blue;
+
+    .head {
+        color: $Cyan;
+        @extend %bold;
+        font-size: 1.3rem;
+    }
+    h3 {
+        color: $Yellow;
+        @extend %bold;
+    }
+}
+h1 {
+    @extend %bold;
+    margin: 0;
+    font-size: 2rem;
+}
+
+.card-blue {
+    background-color: $Cyan;
+}
+
+.card-light-blue {
+    background-color: $Cyan*1.1;
+}
+
+button {
+    width: 100%;
+    height: 50px;
+    margin: auto;
+    font-size: large;
+    color: $Light-Gray;
+    background-color: $Yellow;
+    border: none;
+    border-radius: 7px;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.322);
+    transition: ease 1s;
+}
+
+button:hover {
+    font-size: larger;
+    transform: scale(1.04);
+}
+
+.small {
+    font-size: 0.8rem;
+    position: relative;
+    bottom: 3px;
+    font-weight: 400;
+}
+
+@media(min-width:750px) {
+    .main {
+        display: grid;
+        grid-template-areas: 
+        " card-white card-white "
+        " card-blue card-light-blue" ;
+    }
+    .card-white {
+        width: 600px;
+        height: auto;
+        grid-area: card-white ;
+    }
+    .card-blue {
+        grid-area: card-blue ;
+    }
+    
+    .card-light-blue {
+        grid-area: card-light-blue ;
+    }
+}

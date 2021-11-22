@@ -1,0 +1,114 @@
+:root {
+    --curved-div: 100px;
+    --main-padding: 1rem;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+}
+
+h1 {
+    text-align: center;
+    margin: var(--main-padding);
+}
+
+p {
+    margin: 2rem var(--main-padding);
+    line-height: 1.5rem;
+}
+
+.logo {
+    width: 100px;
+}
+
+section {
+    margin: 4rem 0;
+    width: 100%;
+    padding: 0 var(--main-padding);
+}
+
+header {
+    background: linear-gradient(to right, #FF8870, #FF4457);
+    border-bottom-left-radius: var(--curved-div);
+}
+
+.header {
+    background-image: url('/images/bg-pattern-intro.svg') ;
+    background-size: 300%;
+    background-repeat: no-repeat;
+    background-position: 35%;
+    padding: var(--main-padding);
+    border-bottom-left-radius: var(--curved-div);
+}
+
+.nav-container {
+    display: flex;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    display: none;
+}
+
+.header-content {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    align-items: center;
+    margin: 5rem 0;
+    text-align: center;
+}
+
+.header-content h1 {
+    font-size: 2.5rem;
+}
+
+.header-content div {
+    margin: var(--main-padding);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.links {
+    border: 1px solid white;
+    border-radius: 100px;
+    padding: 0.5rem 1rem;
+    margin: 1rem 0.5rem;
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.links.active {
+    background: white;
+    color: #FF4457;
+}
+
+.grid {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr;
+    place-items: center;
+}
+
+
+
+
+footer {
+    padding: var(--main-padding);
+    background-color: #24242C;
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+footer p {
+    margin: 0.5rem 0;
+}

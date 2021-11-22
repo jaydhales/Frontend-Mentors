@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+  
+  <title>Frontend Mentor | Time tracking dashboard</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%);}
+  </style>
+</head>
+<body class="text-white bg-gray-900 lg:h-screen flex flex-col">
+
+  <div class="grid sm:grid-cols-3 sm:grid-flow-row lg:grid-rows-2 lg:grid-flow-col w-72 sm:w-max m-auto px-4 py-8 gap-4">
+
+    <div class="heading rounded-xl sm:col-span-3 lg:row-span-2 lg:w-52 bg-indigo-900">
+
+      <div class="name py-8 px-6 rounded-xl flex lg:block lg:py-12 bg-blue-700">
+        <img src="/images/image-jeremy.png" alt="" class="w-16 rounded-full h-16 my-auto border-2 border-solid">
+        <p class="text-gray-300 py-2 px-4 lg:px-0">Report for <br> <span class="text-white text-3xl">Jeremy Robson</span> 
+          <br>Total Time: <span class="text-white" id="total-time"></span> 
+        </p>
+        
+      </div>
+
+      <div class="nav p-6 flex justify-between lg:flex-col lg:gap-3 w-full">
+        <a href="#daily" class="nav-link text-gray-400 hover:text-white ">Daily</a>
+        <a href="#weekly" class="nav-link text-gray-400 hover:text-white ">Weekly</a>
+        <a href="#monthly" class="nav-link text-gray-400 hover:text-white ">Monthly</a>
+      </div>
+
+    </div>
+
+    <!-- Card Template
+
+    <div class="card relative rounded-xl  lg:w-52 bg-red-200">
+
+      <img src="/images/icon-work.svg" class="icon w-16 absolute right-4" alt="">
+
+      <div class="activity relative rounded-xl mt-10 lg:w-52 lg:absolute bottom-0 lg:h-3/4 p-6 bg-indigo-900">
+        <div class="activ-title flex justify-between">
+          <p class='font-bold card-title'>Work</p>
+          <img src="/images/icon-ellipsis.svg" class="h-1.5 my-auto">
+        </div>
+        <div class="activ-time flex justify-between sm:block">
+          <p class="text-3xl"><span class="card-time"></span> hrs</p>
+          <p class="my-auto text-sm">Last Week - <span></span> hrs </p>
+        </div>
+      </div>
+
+    </div> 
+
+    -->
+
+    <div class="card relative rounded-xl  lg:w-52 bg-red-300">
+
+      <img src="/images/icon-work.svg" class="icon w-16 absolute right-4" alt="">
+
+      <div class="activity relative rounded-xl mt-10 lg:w-52 lg:absolute bottom-0 lg:h-3/4 p-6 bg-indigo-900">
+        <div class="activ-title flex justify-between">
+          <p class='font-bold card-title'>Work</p>
+          <img src="/images/icon-ellipsis.svg" class="h-1.5 my-auto">
+        </div>
+        <div class="activ-time flex justify-between sm:block">
+          <p class="text-3xl"><span class="card-time"></span> hrs</p>
+          <p class="my-auto text-sm">Last Week - <span></span> hrs </p>
+        </div>
+      </div>
+
+    </div> 
+
+    <div class="card relative rounded-xl  lg:w-52 bg-indigo-300">
+
+      <img src="/images/icon-play.svg" class="icon w-16 absolute right-4" alt="">
+
+      <div class="activity relative rounded-xl mt-10 lg:w-52 lg:absolute bottom-0 lg:h-3/4 p-6 bg-indigo-900">
+        <div class="activ-title flex justify-between">
+          <p class='font-bold card-title'>Play</p>
+          <img src="/images/icon-ellipsis.svg" class="h-1.5 my-auto">
+        </div>
+        <div class="activ-time flex justify-between sm:block">
+          <p class="text-3xl"><span class="card-time"></span> hrs</p>
+          <p class="my-auto text-sm">Last Week - <span></span> hrs </p>
+        </div>
+      </div>
+
+    </div> 
+
+    <div class="card relative rounded-xl  lg:w-52 bg-pink-400">
+
+      <img src="/images/icon-study.svg" class="icon w-16 absolute right-4" alt="">
+
+      <div class="activity relative rounded-xl mt-10 lg:w-52 lg:absolute bottom-0 lg:h-3/4 p-6 bg-indigo-900">
+        <div class="activ-title flex justify-between">
+          <p class='font-bold card-title'>Study</p>
+          <img src="/images/icon-ellipsis.svg" class="h-1.5 my-auto">
+        </div>
+        <div class="activ-time flex justify-between sm:block">
+          <p class="text-3xl"><span class="card-time"></span> hrs</p>
+          <p class="my-auto text-sm">Last Week - <span></span> hrs </p>
+        </div>
+      </div>
+
+    </div> 
+
+    <div class="card relative rounded-xl  lg:w-52 bg-green-300">
+
+      <img src="/images/icon-exercise.svg" class="icon w-16 absolute right-4" alt="">
+
+      <div class="activity relative rounded-xl mt-10 lg:w-52 lg:absolute bottom-0 lg:h-3/4 p-6 bg-indigo-900">
+        <div class="activ-title flex justify-between">
+          <p class='font-bold card-title'>Exercise</p>
+          <img src="/images/icon-ellipsis.svg" class="h-1.5 my-auto">
+        </div>
+        <div class="activ-time flex justify-between sm:block">
+          <p class="text-3xl"><span class="card-time"></span> hrs</p>
+          <p class="my-auto text-sm">Last Week - <span></span> hrs </p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="card relative rounded-xl  lg:w-52 bg-purple-700">
+
+      <img src="/images/icon-social.svg" class="icon w-16 absolute right-4" alt="">
+
+      <div class="activity relative rounded-xl mt-10 lg:w-52 lg:absolute bottom-0 lg:h-3/4 p-6 bg-indigo-900">
+        <div class="activ-title flex justify-between">
+          <p class='font-bold card-title'>Social</p>
+          <img src="/images/icon-ellipsis.svg" class="h-1.5 my-auto">
+        </div>
+        <div class="activ-time flex justify-between sm:block">
+          <p class="text-3xl"><span class="card-time"></span> hrs</p>
+          <p class="my-auto text-sm">Last Week - <span></span> hrs </p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="card relative rounded-xl  lg:w-52 bg-yellow-300">
+
+      <img src="/images/icon-self-care.svg" class="icon w-16 absolute right-4" alt="">
+
+      <div class="activity relative rounded-xl mt-10 lg:w-52 lg:absolute bottom-0 lg:h-3/4 p-6 bg-indigo-900">
+        <div class="activ-title flex justify-between">
+          <p class='font-bold card-title'>Self Care</p>
+          <img src="/images/icon-ellipsis.svg" class="h-1.5 my-auto">
+        </div>
+        <div class="activ-time flex justify-between sm:block">
+          <p class="text-3xl"><span class="card-time"></span> hrs</p>
+          <p class="my-auto text-sm">Last Week - <span></span> hrs </p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://james-web.vercel.app">James Osunkiyesi</a>.
+  </div>
+
+  <script src="index.js"></script>
+</body>
+</html>

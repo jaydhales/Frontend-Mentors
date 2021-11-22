@@ -1,0 +1,60 @@
+body {
+    background-color: white;
+    font-family: 'Bai Jamjuree', sans-serif;
+}
+
+header {
+    background: url(images/bg-header-desktop.png);
+    text-align: center;
+    padding: 10rem 1rem 1rem;
+}
+#head-text {
+    font-size: 2.5rem;
+}
+section {
+    text-align: center;
+    padding: 0.5rem 2rem 3rem;
+}
+section h1 {
+    font-weight: 600;
+    font-size: 2rem;
+}
+section p {
+    font-weight: 400;
+}
+.btn {
+    padding: 0.5rem 2rem;
+    margin: 1rem;
+    color: white;
+    border-radius: 1rem;
+    border: none;
+    
+}
+
+.btn-ios {
+    background-color: hsl(171, 66%, 44%);
+    box-shadow: 0 0 10px 3px  hsla(171, 66%, 44%, 0.5);
+}
+.btn-mac {
+    background-color: hsl(233, 100%, 69%);
+    box-shadow: 0 0px 10px 3px hsl(233, 100%, 69%, 0.5);
+}
+.btn:hover{
+    transform: scale(1.01);
+    
+}
+img {
+    width: 100%;
+    
+}
+
+@media(min-width:1080px) {
+    .flex-row {
+        display: flex;
+        gap: 10px;
+       overflow: auto;
+    }
+    .flex-row img {
+        width: 50%;
+    }
+}
