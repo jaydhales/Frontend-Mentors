@@ -15,6 +15,7 @@ const cartCount = document.querySelector('.cart-count');
 const unitMinus = document.querySelector('.btn-minus');
 const unitPlus = document.querySelector('.btn-plus');
 const addUnit = document.querySelector('.add-cart');
+const deleteItem = document.querySelector('.icon-delete');
 let unit = document.querySelector('#unit');
 let unitCount = 0;
 let itemCount = 0;
@@ -99,6 +100,10 @@ addUnit.addEventListener( 'click', (e) => {
 cartIcon.addEventListener( 'click', (e) => {
     e.preventDefault();
     cart.classList.toggle('show-cart');
+})
+
+deleteItem.addEventListener( 'click', (e) => {
+    console.log(e.target.parentNode);
 })
 
 
